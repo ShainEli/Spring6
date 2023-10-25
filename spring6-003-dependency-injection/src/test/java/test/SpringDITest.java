@@ -1,8 +1,11 @@
 package test;
 
+import bean.User;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import service.CustomerService;
+import service.OrderService;
 import service.UserService;
 
 /**
@@ -13,6 +16,25 @@ import service.UserService;
  * @Author:XSS
  **/
 public class SpringDITest {
+    @Test
+    public void testSimpleTypeSet(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("set-di.xml");
+        User user = applicationContext.getBean("userBean", User.class);
+        System.out.println(user);
+
+    }
+    @Test
+    public void testSetDIExt(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("set-di.xml");
+        OrderService orderService = applicationContext.getBean("orderServiceBean", OrderService.class);
+        orderService.generate();
+    }
+    @Test
+    public void testConstructorDI(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
+        CustomerService customerService = applicationContext.getBean("customerServiceBean", CustomerService.class);
+        customerService.save();
+    }
     @Test
     public void testSetDI(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Application.xml");

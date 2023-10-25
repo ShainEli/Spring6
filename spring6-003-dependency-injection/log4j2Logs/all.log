@@ -1,0 +1,10 @@
+2023-10-25 23:21:50.723 [DEBUG] org.springframework.context.support.AbstractApplicationContext.prepareRefresh -
+            Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@27d5a580
+2023-10-25 23:21:50.779 [DEBUG] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions -
+            Loaded 2 bean definitions from class path resource [set-di.xml]
+2023-10-25 23:21:50.796 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
+            Creating shared instance of singleton bean 'orderDaoBean'
+2023-10-25 23:21:50.806 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
+            Creating shared instance of singleton bean 'orderServiceBean'
+2023-10-25 23:21:50.822 [INFO ] dao.OrderDao.generate -
+            订单正在生成...

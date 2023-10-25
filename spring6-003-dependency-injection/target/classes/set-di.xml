@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--外部Bean-->
+    <bean id="orderDaoBean" class="dao.OrderDao"/>
+    <bean id="orderServiceBean" class="service.OrderService">
+        <!--注入外部Bean-->
+        <!--使用ref属性来引入-->
+        <property name="orderDao" ref="orderDaoBean"/>
+    </bean>
+</beans>
