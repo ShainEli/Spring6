@@ -1,0 +1,10 @@
+2023-10-25 17:36:16.752 [DEBUG] org.springframework.context.support.AbstractApplicationContext.prepareRefresh -
+            Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1fd14d74
+2023-10-25 17:36:16.875 [DEBUG] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions -
+            Loaded 3 bean definitions from class path resource [Application.xml]
+2023-10-25 17:36:16.898 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
+            Creating shared instance of singleton bean 'userBean'
+2023-10-25 17:36:16.905 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
+            Creating shared instance of singleton bean 'userDaoBean'
+2023-10-25 17:36:16.905 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
+            Creating shared instance of singleton bean 'nowTime'
