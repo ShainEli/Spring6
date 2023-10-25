@@ -8,6 +8,7 @@
     <artifactId>spring6-002</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!--spring版本仓库-->
     <repositories>
         <repository>
             <id>spring-milestones</id>
@@ -18,6 +19,7 @@
             </snapshots>
         </repository>
     </repositories>
+    <!--依赖-->
     <dependencies>
         <!--spring-context-->
         <dependency>

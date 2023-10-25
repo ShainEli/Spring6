@@ -8,6 +8,7 @@ import dao.UserDao;
  * @Author:XSS
  **/
 public class UserDaoImplForMySQL implements UserDao {
+    //UserDao userDao = new UserDaoImplForMySQL();
     @Override
     public void deletedById() {
         System.out.println("Mysql数据库正在删除用户信息...");

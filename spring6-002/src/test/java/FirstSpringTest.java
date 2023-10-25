@@ -42,7 +42,13 @@ public class FirstSpringTest {
     }
     @Test
     public void testFirstSpringCOde(){
+        //第一步：获取Spring容器对象
+        // ApplicationContext：应用上下方，就是Spring容器
+        // ApplicationContext是个接口
+        // ClassPathXmlApplicationContext是专门从类路径中加载spring配置文件的spring上下文对象
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("Application.xml");
+
+        //第二步：根据bean的id从Spring容器中获取这个对象
         Object userDaoBean = applicationContext.getBean("userDaoBean");
         System.out.println(userDaoBean);
     }
