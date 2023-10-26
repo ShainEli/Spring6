@@ -1,5 +1,6 @@
 package test;
 
+import bean.SimpleValueType;
 import bean.User;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
@@ -7,6 +8,8 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import service.CustomerService;
 import service.OrderService;
 import service.UserService;
+
+import java.util.Date;
 
 /**
  * @ClassName: SpringDITest
@@ -17,10 +20,15 @@ import service.UserService;
  **/
 public class SpringDITest {
     @Test
+    public void newDate(){
+        System.out.println(new Date());
+    }
+    @Test
     public void testSimpleTypeSet(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("set-di.xml");
-        User user = applicationContext.getBean("userBean", User.class);
-        System.out.println(user);
+        //User user = applicationContext.getBean("userBean", User.class);
+        SimpleValueType simpleValueType = applicationContext.getBean("simpleValueTypeBean", SimpleValueType.class);
+        System.out.println(simpleValueType);
 
     }
     @Test

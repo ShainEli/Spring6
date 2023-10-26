@@ -25,4 +25,22 @@
         <property name="age" value="20"/>
         <property name="password" value="123456"/>
     </bean>
+
+    <!--测试简单类型-->
+    <bean id="simpleValueTypeBean" class="bean.SimpleValueType">
+        <property name="age" value="20"/>
+        <property name="age2" value="20"/>
+        <property name="ch" value="男"/>
+        <property name="ch2" value="女"/>
+        <property name="clazz" value="java.lang.String"/>
+        <property name="flag" value="true"/>
+        <property name="flag2" value="false"/>
+        <property name="season" value="SPRING"/>
+        <property name="username" value="张三"/>
+        <!--1970-10-11字符串无法转换成java.util.Date类型-->
+        <!--<property name="birth" value="1970-10-11"/>-->
+        <!--Date类型作为简单类型，使用Value赋值的话，这个日期字符串格式有要求-->
+        <!--在实际开发中，我们一般不会把Date当做简单类型，一般会采用ref给Date类型的属性赋值-->
+        <property name="birth" value="Thu Oct 26 10:53:02 CST 2023"/>
+    </bean>
 </beans>
