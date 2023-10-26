@@ -1,7 +1,10 @@
 package test;
 
+import bean.Clazz;
 import bean.SimpleValueType;
+import bean.Student;
 import bean.User;
+import jdbc.MyDataSource;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -19,9 +22,25 @@ import java.util.Date;
  * @Author:XSS
  **/
 public class SpringDITest {
+
     @Test
     public void newDate(){
         System.out.println(new Date());
+    }
+
+    @Test
+    public void testCascade(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("cascade.xml");
+        Student student = applicationContext.getBean("studentBean", Student.class);
+        Clazz clazz = applicationContext.getBean("clazzBean", Clazz.class);
+        System.out.println(student);
+        System.out.println(clazz);
+    }
+    @Test
+    public void testMyDataSource(){
+        ApplicationContext applicationContext = new ClassPathXmlApplicationContext("set-di.xml");
+        MyDataSource myDataSource = applicationContext.getBean("myDataSource", MyDataSource.class);
+        System.out.println(myDataSource);
     }
     @Test
     public void testSimpleTypeSet(){

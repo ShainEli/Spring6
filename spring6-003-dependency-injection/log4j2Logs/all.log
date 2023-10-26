@@ -1,14 +1,8 @@
-2023-10-26 10:57:23.531 [DEBUG] org.springframework.context.support.AbstractApplicationContext.prepareRefresh -
+2023-10-26 11:40:18.280 [DEBUG] org.springframework.context.support.AbstractApplicationContext.prepareRefresh -
             Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a72a540
-2023-10-26 10:57:23.644 [DEBUG] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions -
-            Loaded 5 bean definitions from class path resource [set-di.xml]
-2023-10-26 10:57:23.672 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
-            Creating shared instance of singleton bean 'orderDaoBean'
-2023-10-26 10:57:23.697 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
-            Creating shared instance of singleton bean 'orderServiceBean'
-2023-10-26 10:57:23.729 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
-            Creating shared instance of singleton bean 'orderServiceBean2'
-2023-10-26 10:57:23.731 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
-            Creating shared instance of singleton bean 'userBean'
-2023-10-26 10:57:23.738 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
-            Creating shared instance of singleton bean 'simpleValueTypeBean'
+2023-10-26 11:40:18.434 [DEBUG] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions -
+            Loaded 2 bean definitions from class path resource [cascade.xml]
+2023-10-26 11:40:18.459 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
+            Creating shared instance of singleton bean 'studentBean'
+2023-10-26 11:40:18.499 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
+            Creating shared instance of singleton bean 'clazzBean'
