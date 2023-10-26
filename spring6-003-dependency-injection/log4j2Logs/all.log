@@ -1,8 +1,16 @@
-2023-10-26 11:40:18.280 [DEBUG] org.springframework.context.support.AbstractApplicationContext.prepareRefresh -
+2023-10-26 18:03:40.388 [DEBUG] org.springframework.context.support.AbstractApplicationContext.prepareRefresh -
             Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1a72a540
-2023-10-26 11:40:18.434 [DEBUG] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions -
-            Loaded 2 bean definitions from class path resource [cascade.xml]
-2023-10-26 11:40:18.459 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
-            Creating shared instance of singleton bean 'studentBean'
-2023-10-26 11:40:18.499 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
-            Creating shared instance of singleton bean 'clazzBean'
+2023-10-26 18:03:40.536 [DEBUG] org.springframework.beans.factory.xml.XmlBeanDefinitionReader.doLoadBeanDefinitions -
+            Loaded 2 bean definitions from class path resource [spring-properties.xml]
+2023-10-26 18:03:40.554 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
+            Creating shared instance of singleton bean 'org.springframework.context.support.PropertySourcesPlaceholderConfigurer#0'
+2023-10-26 18:03:40.589 [DEBUG] org.springframework.core.env.PropertySourcesPropertyResolver.logKeyFound -
+            Found key 'jdbc.url' in PropertySource 'localProperties' with value of type String
+2023-10-26 18:03:40.599 [DEBUG] org.springframework.core.env.PropertySourcesPropertyResolver.logKeyFound -
+            Found key 'jdbc.driverClass' in PropertySource 'localProperties' with value of type String
+2023-10-26 18:03:40.599 [DEBUG] org.springframework.core.env.PropertySourcesPropertyResolver.logKeyFound -
+            Found key 'jdbc.password' in PropertySource 'localProperties' with value of type String
+2023-10-26 18:03:40.599 [DEBUG] org.springframework.core.env.PropertySourcesPropertyResolver.logKeyFound -
+            Found key 'jdbc.username' in PropertySource 'localProperties' with value of type String
+2023-10-26 18:03:40.603 [DEBUG] org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton -
+            Creating shared instance of singleton bean 'dataSource'
