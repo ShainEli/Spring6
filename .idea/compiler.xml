@@ -8,8 +8,9 @@
         <outputRelativeToContentRoot value="true" />
         <module name="factory-method" />
         <module name="simple-factory" />
-        <module name="spring6-001" />
         <module name="spring6-003-dependency-injection" />
+        <module name="spring6-005-bean-instantiation" />
+        <module name="spring6-001" />
         <module name="spring6-002" />
         <module name="spring6-004-scope" />
       </profile>
