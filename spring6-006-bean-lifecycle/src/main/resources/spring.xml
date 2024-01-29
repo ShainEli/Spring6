@@ -7,6 +7,6 @@
         <property name="name" value="Tom"/>
     </bean>
 
-    <!--配置Bean后处理器 注意：Bean后处理器将作用于整个配置文件中的所有的bean-->
+    <!--配置Bean后处理器 注意：Bean后处理器将作用于当前配置文件中的所有的bean-->
     <bean class="bean.LogBeanPostProcessor"/>
 </beans>

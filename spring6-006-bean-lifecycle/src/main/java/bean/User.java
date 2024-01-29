@@ -1,5 +1,8 @@
 package bean;
 
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.*;
+
 /**
  * Bean的生命周期按照粗略的五步：
  * 第一步：实例化Bean(无参数构造方法)
@@ -14,7 +17,7 @@ package bean;
  * @Date: 2023/10/31 17:18
  * @Author:XSS
  **/
-public class User {
+public class User implements BeanNameAware, BeanClassLoaderAware, BeanFactoryAware, InitializingBean, DisposableBean {
     private  String name;
 
     public void setName(String name) {
@@ -33,5 +36,30 @@ public class User {
 
     public void destroyBean(){
         System.out.println("第五步：销毁Bean...");
+    }
+
+    @Override
+    public void setBeanClassLoader(ClassLoader classLoader) {
+        System.out.println("此Bean类的加载器：" + classLoader);
+    }
+
+    @Override
+    public void setBeanFactory(BeanFactory beanFactory) throws BeansException {
+        System.out.println("生产此Bean的工厂对象：" + beanFactory);
+    }
+
+    @Override
+    public void setBeanName(String name) {
+        System.out.println("此Bean的名字：" + name);
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("InitializingBean's afterProperTiesSet执行");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("DisposableBean's destroy执行");
     }
 }
