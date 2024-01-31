@@ -10,6 +10,7 @@
             主要原因是在这种模式下Spring对Bean的管理主要分为清晰的两个阶段：
                 1.在Spring容器加载的时候，实例化Bean，只要其中任意一个Bean实例化之后，马上进行“曝光”[在属性赋值之前]
                 2.Bean“曝光”之后，再进行属性的赋值（调用set方法）
+        注意：只有在scope是singleton的情况下，Bean才会采取提前“曝光”的措施
     -->
     <bean id="husbandBean" class="icu.shain.bean.Husband" scope="singleton">
         <property name="name" value="张三"/>
@@ -19,4 +20,16 @@
         <property name="name" value="小花"/>
         <property name="husband" ref="husbandBean"/>
     </bean>
+
+    <!--在prototype + setter模式下的循环依赖存在问题，会出现异常！-->
+    <!--BeanCurrentlyInCreationException 当前Bean正在处于创建中异常-->
+    <!--注意：只有当两个Bean的scope都是prototype的时候，才会出现异常。-->
+<!--    <bean id="husbandBean" class="icu.shain.bean.Husband" scope="prototype">-->
+<!--        <property name="name" value="张三"/>-->
+<!--        <property name="wife" ref="wifeBean"/>-->
+<!--    </bean>-->
+<!--    <bean id="wifeBean" class="icu.shain.bean.Wife" scope="prototype">-->
+<!--        <property name="name" value="小花"/>-->
+<!--        <property name="husband" ref="husbandBean"/>-->
+<!--    </bean>-->
 </beans>
