@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--使用myspring框架的开发人员提供的配置文件-->
+<beans>
+    <bean id="user" class="icu.shain.myspring.bean.User">
+        <property name="name" value="张三"></property>
+        <property name="age" value="30"></property>
+    </bean>
+    <bean id="userDao" class="icu.shain.myspring.bean.UserDao"/>
+    <bean id="userService" class="icu.shain.myspring.bean.UserService">
+        <property name="userDao" ref="userDaoBean"/>
+    </bean>
+</beans>
